@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Care Guide | Grow Better Plants</title>
+    <meta name="description" content="Learn how to care for your plants with our comprehensive plant care guide. Discover watering schedules, sunlight needs, and more.">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">
+                <i class="fa-solid fa-leaf"></i> PlantCare
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="plants.html" class="nav-link">Plants Directory</a></li>
+                <li><a href="diseases.html" class="nav-link">Diseases Guide</a></li>
+                <li><a href="pests.html" class="nav-link">Pest Management</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main style="margin-top: 70px;">
+        <!-- Hero Section -->
+        <section class="hero" style="background: linear-gradient(rgba(46, 125, 50, 0.7), rgba(46, 125, 50, 0.7)), url('images/hero_bg.png') center/cover; color: white; padding: 100px 0; text-align: center;">
+            <div class="container">
+                <h1 style="color: white; font-size: 3.5rem; margin-bottom: 20px;">Bring Nature Into Your Home</h1>
+                <p style="font-size: 1.2rem; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">Discover the best plant care tips, schedules, and guidance to keep your green friends thriving.</p>
+                
+                <div class="search-container" style="max-width: 500px; margin: 0 auto; display: flex; background: white; border-radius: 30px; padding: 5px; box-shadow: var(--shadow-md);">
+                    <input type="text" id="homeSearchInput" placeholder="Search for plants..." style="flex: 1; border: none; padding: 10px 20px; border-radius: 30px; outline: none; font-family: inherit;">
+                    <button class="btn btn-primary" id="homeSearchBtn" style="border-radius: 30px;"><i class="fa-solid fa-search"></i> Search</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="section categories">
+            <div class="container">
+                <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+                    <h2>Explore Categories</h2>
+                    <p>Find plants based on your specific needs and environment.</p>
+                </div>
+                <div class="grid categories-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+                    <a href="plants.html?category=indoor" class="category-card" style="display: block; color: inherit;">
+                        <div class="category-icon"><i class="fa-solid fa-house"></i></div>
+                        <h3>Indoor Plants</h3>
+                        <p>Perfect for your living room</p>
+                    </a>
+                    <a href="plants.html?category=outdoor" class="category-card" style="display: block; color: inherit;">
+                        <div class="category-icon"><i class="fa-solid fa-tree"></i></div>
+                        <h3>Outdoor Plants</h3>
+                        <p>Thrive in the garden</p>
+                    </a>
+                    <a href="plants.html?category=succulent" class="category-card" style="display: block; color: inherit;">
+                        <div class="category-icon"><i class="fa-solid fa-seedling"></i></div>
+                        <h3>Succulents</h3>
+                        <p>Low maintenance beauties</p>
+                    </a>
+                    <a href="plants.html?category=medicinal" class="category-card" style="display: block; color: inherit;">
+                        <div class="category-icon"><i class="fa-solid fa-leaf"></i></div>
+                        <h3>Medicinal</h3>
+                        <p>Natural healing plants</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Plants Section -->
+        <section class="section featured-plants" style="background-color: var(--color-white);">
+            <div class="container">
+                <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+                    <h2>Featured Plants</h2>
+                    <p>Some of the most popular plants among our community.</p>
+                </div>
+                <div class="grid plant-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                    
+                    <div class="plant-card">
+                        <img src="images/snake_plant.png" alt="Snake Plant" class="plant-img">
+                        <div class="plant-info">
+                            <h3>Snake Plant</h3>
+                            <p class="plant-short-desc">Excellent air purifier, requires very little water and light.</p>
+                            <a href="plants.html?search=snake" class="btn btn-outline" style="width: 100%; text-align: center; margin-top: 1rem;">View Details</a>
+                        </div>
+                    </div>
+                    
+                    <div class="plant-card">
+                        <img src="images/aloe_vera.png" alt="Aloe Vera" class="plant-img">
+                        <div class="plant-info">
+                            <h3>Aloe Vera</h3>
+                            <p class="plant-short-desc">Medicinal succulent, great for skin care, loves bright light.</p>
+                            <a href="plants.html?search=aloe" class="btn btn-outline" style="width: 100%; text-align: center; margin-top: 1rem;">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class="plant-card">
+                        <img src="images/money_plant.png" alt="Money Plant" class="plant-img">
+                        <div class="plant-info">
+                            <h3>Money Plant</h3>
+                            <p class="plant-short-desc">Fast growing trailing plant that brings good luck.</p>
+                            <a href="plants.html?search=money" class="btn btn-outline" style="width: 100%; text-align: center; margin-top: 1rem;">View Details</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="plants.html" class="btn btn-primary">View All Plants</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Care Tips Section -->
+        <section class="section care-tips">
+            <div class="container">
+                <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+                    <h2>Basic Care Rules</h2>
+                    <p>Follow these simple rules to keep your plants happy.</p>
+                </div>
+                <div class="grid tips-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div class="tip-card">
+                        <div class="tip-number">1</div>
+                        <h3>Don't Overwater</h3>
+                        <p>More plants die from overwatering than underwatering. Always check the top inch of soil before watering.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-number">2</div>
+                        <h3>Right Light</h3>
+                        <p>Match your plant to your light conditions. Not all plants can survive in dark corners or direct sun.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-number">3</div>
+                        <h3>Good Drainage</h3>
+                        <p>Always use pots with drainage holes to prevent root rot and ensure healthy growth.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3 class="nav-logo" style="color: white;"><i class="fa-solid fa-leaf"></i> PlantCare</h3>
+                    <p>Your ultimate guide to plant care, maintenance, and gardening success.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="plants.html">Plants Directory</a>
+                        <a href="diseases.html">Diseases</a>
+                        <a href="pests.html">Pest Control</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <p><i class="fa-solid fa-envelope"></i> info@plantcareguide.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +1 234 567 890</p>
+                    <p><i class="fa-solid fa-location-dot"></i> 123 Garden St, Green City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Plant Care Guide. All Rights Reserved. Created for B.Tech Final Year Project.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

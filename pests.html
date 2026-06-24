@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pest Management | Plant Care Guide</title>
+    <meta name="description" content="Identify and treat common plant pests including aphids, spider mites, whiteflies, and mealybugs.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .pest-card {
+            background-color: var(--color-white);
+            border-radius: var(--border-radius-md);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-sm);
+            border-left: 5px solid #ff9800;
+            transition: var(--transition);
+        }
+        .pest-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        .pest-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        .pest-header i {
+            font-size: 2rem;
+            color: #ff9800;
+        }
+        .info-section {
+            margin-bottom: 1.5rem;
+        }
+        .info-section h4 {
+            color: var(--color-text);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .info-section ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+            color: var(--color-text-light);
+        }
+        .treatment-box {
+            background-color: #fff3e0;
+            padding: 1rem;
+            border-radius: var(--border-radius-sm);
+            border: 1px solid #ffe0b2;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">
+                <i class="fa-solid fa-leaf"></i> PlantCare
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="plants.html" class="nav-link">Plants Directory</a></li>
+                <li><a href="diseases.html" class="nav-link">Diseases Guide</a></li>
+                <li><a href="pests.html" class="nav-link">Pest Management</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main style="margin-top: 100px; min-height: 70vh;">
+        <div class="container" style="max-width: 900px;">
+            <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+                <h1>Pest Management</h1>
+                <p>Learn how to keep destructive bugs away from your plants safely and effectively.</p>
+            </div>
+
+            <!-- Aphids -->
+            <div class="pest-card">
+                <div class="pest-header">
+                    <i class="fa-solid fa-bug"></i>
+                    <h2>Aphids</h2>
+                </div>
+                <div class="info-section">
+                    <h4><i class="fa-solid fa-circle-info" style="color: #666;"></i> Description</h4>
+                    <p>Aphids are tiny, soft-bodied insects that suck nutrient-rich sap from plants. They multiply rapidly and can cause significant damage if left unchecked.</p>
+                </div>
+                <div class="info-section">
+                    <h4><i class="fa-solid fa-magnifying-glass" style="color: #666;"></i> Identification</h4>
+                    <p>Look for clusters of tiny green, black, brown, or pink bugs, usually on the undersides of leaves or on new, tender growth. They leave behind a sticky substance called honeydew, which can lead to black sooty mold. Leaves may appear curled, stunted, or yellowing.</p>
+                </div>
+                <div class="info-section">
+                    <h4><i class="fa-solid fa-shield-halved" style="color: #2E7D32;"></i> Prevention</h4>
+                    <ul>
+                        <li>Avoid excessive nitrogen fertilizers, which promote soft, sappy growth that aphids love.</li>
+                        <li>Encourage beneficial insects like ladybugs and lacewings in your garden.</li>
+                        <li>Inspect new plants carefully before bringing them home or indoors.</li>
+                    </ul>
+                </div>
+                <div class="info-section treatment-box">
+                    <h4 style="color: #e65100;"><i class="fa-solid fa-spray-can"></i> Treatment</h4>
+                    <p>For minor infestations, a strong blast of water from a hose can knock them off. For persistent issues, spray the plant thoroughly with insecticidal soap or neem oil. Make sure to coat the undersides of the leaves. Repeat every few days until they are gone.</p>
+                </div>
+            </div>
+
+            <!-- Spider Mites -->
+            <div class="pest-card">
+                <div class="pest-header">
+                    <i class="fa-solid fa-spider"></i>
+                    <h2>Spider Mites</h2>
+                </div>
+                <div class="info-section">
+                    <h4><i class="fa-solid fa-circle-info" style="color: #666;"></i> Description</h4>
+                    <p>Spider mites are arachnids, not true insects. They are incredibly small, often looking like moving dust particles. They thrive in hot, dry conditions.</p>
+                </div>
+                <div class="info-section">
+                    <h4><i class="fa-solid fa-magnifying-glass" style="color: #666;"></i> Identification</h4>
+                    <p>The first sign is usually tiny yellow or white speckles (stippling) on the leaves. As the infestation grows, you will see fine, silky webbing between stems and leaves. Leaves will eventually pale, turn yellow, and drop.</p>
+                </div>
+                <div class="info-section">
+                    <h4><i class="fa-solid fa-shield-halved" style="color: #2E7D32;"></i> Prevention</h4>
+                    <ul>
+                        <li>Keep the humidity up around your plants, as spider mites hate moisture. Regular misting helps.</li>
+                        <li>Wipe leaves down occasionally with a damp cloth to remove dust and stray mites.</li>
+                        <li>Keep plants well-watered, as stressed plants are more susceptible.</li>
+                    </ul>
+                </div>
+                <div class="info-section treatment-box">
+                    <h4 style="color: #e65100;"><i class="fa-solid fa-spray-can"></i> Treatment</h4>
+                    <p>Isolate the plant immediately. Wash the plant in the shower or sink to physically remove mites and webbing. Spray thoroughly with neem oil, horticultural oil, or insecticidal soap. Mites build resistance quickly, so you may need to alternate treatments every 3-5 days.</p>
+                </div>
+            </div>
+
+            <!-- Whiteflies -->
+            <div class="pest-card">
+                <div class="pest-header">
+                    <i class="fa-solid fa-locust"></i>
+                    <h2>Whiteflies</h2>
+                </div>
+                <div class="info-section">
+                    <h4><i class="fa-solid fa-circle-info" style="color: #666;"></i> Description</h4>
+                    <p>Whiteflies are tiny, winged insects that look like miniature white moths. Like aphids, they feed on plant sap and excrete honeydew.</p>
+                </div>
+                <div class="info-section">
+                    <h4><i class="fa-solid fa-magnifying-glass" style="color: #666;"></i> Identification</h4>
+                    <p>When you disturb an infested plant, a cloud of tiny white bugs will fly up before settling back down. You'll find them congregated on the undersides of leaves. Leaves may become sticky, yellow, and eventually die.</p>
+                </div>
+                <div class="info-section">
+                    <h4><i class="fa-solid fa-shield-halved" style="color: #2E7D32;"></i> Prevention</h4>
+                    <ul>
+                        <li>Use yellow sticky traps around your plants to catch adults before they can lay eggs.</li>
+                        <li>Inspect new plants thoroughly.</li>
+                        <li>Maintain good air circulation.</li>
+                    </ul>
+                </div>
+                <div class="info-section treatment-box">
+                    <h4 style="color: #e65100;"><i class="fa-solid fa-spray-can"></i> Treatment</h4>
+                    <p>Use a hand vacuum in the early morning (when they are sluggish) to suck up adults. Spray the undersides of the leaves with insecticidal soap or neem oil. Because they fly away easily, treatment needs to be thorough and repeated regularly.</p>
+                </div>
+            </div>
+
+            <!-- Mealybugs -->
+            <div class="pest-card">
+                <div class="pest-header">
+                    <i class="fa-solid fa-worm"></i>
+                    <h2>Mealybugs</h2>
+                </div>
+                <div class="info-section">
+                    <h4><i class="fa-solid fa-circle-info" style="color: #666;"></i> Description</h4>
+                    <p>Mealybugs are unarmored scale insects that cover themselves with a white, waxy, cotton-like substance. They suck sap from stems and leaves.</p>
+                </div>
+                <div class="info-section">
+                    <h4><i class="fa-solid fa-magnifying-glass" style="color: #666;"></i> Identification</h4>
+                    <p>Look for white, cottony masses primarily in the leaf axils (where the leaf meets the stem), along the veins, or hidden underneath leaves. Plants will show stunted growth, yellowing leaves, and sticky honeydew residue.</p>
+                </div>
+                <div class="info-section">
+                    <h4><i class="fa-solid fa-shield-halved" style="color: #2E7D32;"></i> Prevention</h4>
+                    <ul>
+                        <li>Examine the nooks and crannies of new plants before bringing them indoors.</li>
+                        <li>Avoid over-fertilizing with nitrogen.</li>
+                        <li>Keep plants clean by wiping leaves regularly.</li>
+                    </ul>
+                </div>
+                <div class="info-section treatment-box">
+                    <h4 style="color: #e65100;"><i class="fa-solid fa-spray-can"></i> Treatment</h4>
+                    <p>For a light infestation, dip a cotton swab in rubbing alcohol (70% isopropyl) and dab directly on the mealybugs to melt their waxy coating and kill them. For heavier infestations, spray with neem oil or insecticidal soap, making sure to penetrate the cottony masses.</p>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3 class="nav-logo" style="color: white;"><i class="fa-solid fa-leaf"></i> PlantCare</h3>
+                    <p>Your ultimate guide to plant care, maintenance, and gardening success.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="plants.html">Plants Directory</a>
+                        <a href="diseases.html">Diseases</a>
+                        <a href="pests.html">Pest Control</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <p><i class="fa-solid fa-envelope"></i> info@plantcareguide.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +1 234 567 890</p>
+                    <p><i class="fa-solid fa-location-dot"></i> 123 Garden St, Green City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Plant Care Guide. All Rights Reserved. Created for B.Tech Final Year Project.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

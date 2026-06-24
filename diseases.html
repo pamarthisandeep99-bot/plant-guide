@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Diseases Guide | Plant Care Guide</title>
+    <meta name="description" content="Learn how to identify, prevent, and treat common plant diseases to keep your garden healthy.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .disease-card {
+            background-color: var(--color-white);
+            border-radius: var(--border-radius-md);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-sm);
+            border-left: 5px solid #ef5350;
+            transition: var(--transition);
+        }
+        .disease-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        .disease-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        .disease-header i {
+            font-size: 2rem;
+            color: #ef5350;
+        }
+        .info-section {
+            margin-bottom: 1.5rem;
+        }
+        .info-section h4 {
+            color: var(--color-text);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .info-section ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+            color: var(--color-text-light);
+        }
+        .treatment-box {
+            background-color: #ffebee;
+            padding: 1rem;
+            border-radius: var(--border-radius-sm);
+            border: 1px solid #ffcdd2;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">
+                <i class="fa-solid fa-leaf"></i> PlantCare
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="plants.html" class="nav-link">Plants Directory</a></li>
+                <li><a href="diseases.html" class="nav-link">Diseases Guide</a></li>
+                <li><a href="pests.html" class="nav-link">Pest Management</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main style="margin-top: 100px; min-height: 70vh;">
+        <div class="container" style="max-width: 900px;">
+            <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+                <h1>Common Plant Diseases</h1>
+                <p>A comprehensive guide to identifying, preventing, and treating the most common issues affecting your plants.</p>
+            </div>
+
+            <!-- Powdery Mildew -->
+            <div class="disease-card">
+                <div class="disease-header">
+                    <i class="fa-solid fa-virus"></i>
+                    <h2>Powdery Mildew</h2>
+                </div>
+                <div class="info-section">
+                    <h4><i class="fa-solid fa-eye" style="color: #666;"></i> Symptoms</h4>
+                    <p>White or gray powdery spots or patches on the upper surfaces of leaves, stems, and sometimes flowers. Leaves may turn yellow, curl, or drop prematurely.</p>
+                </div>
+                <div class="info-section">
+                    <h4><i class="fa-solid fa-microscope" style="color: #666;"></i> Causes</h4>
+                    <p>Caused by various fungi species. It thrives in environments with high humidity, poor air circulation, and moderate temperatures. Unlike many fungi, it does not need standing water to grow.</p>
+                </div>
+                <div class="info-section">
+                    <h4><i class="fa-solid fa-shield-halved" style="color: #2E7D32;"></i> Prevention</h4>
+                    <ul>
+                        <li>Ensure adequate spacing between plants for good air circulation.</li>
+                        <li>Prune overcrowded branches to let light and air in.</li>
+                        <li>Avoid overhead watering; water at the base of the plant.</li>
+                        <li>Place plants in areas with sufficient sunlight.</li>
+                    </ul>
+                </div>
+                <div class="info-section treatment-box">
+                    <h4 style="color: #c62828;"><i class="fa-solid fa-kit-medical"></i> Treatment Suggestions</h4>
+                    <p>Remove and destroy severely infected plant parts. Do not compost them. Apply a fungicide containing sulfur, potassium bicarbonate, or neem oil. A homemade spray of 1 tablespoon baking soda and 1/2 teaspoon liquid soap in a gallon of water can also be effective if applied early.</p>
+                </div>
+            </div>
+
+            <!-- Root Rot -->
+            <div class="disease-card">
+                <div class="disease-header">
+                    <i class="fa-solid fa-water"></i>
+                    <h2>Root Rot</h2>
+                </div>
+                <div class="info-section">
+                    <h4><i class="fa-solid fa-eye" style="color: #666;"></i> Symptoms</h4>
+                    <p>Plants appear wilted despite moist soil. Leaves turn yellow and drop off. Growth is stunted. If you check the roots, they will look dark brown or black and feel mushy or slimy, often with a foul odor.</p>
+                </div>
+                <div class="info-section">
+                    <h4><i class="fa-solid fa-microscope" style="color: #666;"></i> Causes</h4>
+                    <p>Overwatering is the primary cause, which suffocates the roots. This creates a perfect environment for soil-borne fungi (like Pythium or Phytophthora) to attack the weakened root system.</p>
+                </div>
+                <div class="info-section">
+                    <h4><i class="fa-solid fa-shield-halved" style="color: #2E7D32;"></i> Prevention</h4>
+                    <ul>
+                        <li>Never overwater. Always check soil moisture before watering.</li>
+                        <li>Use pots with drainage holes. Never let plants sit in waterlogged saucers.</li>
+                        <li>Use well-draining potting mixes containing perlite or coarse sand.</li>
+                    </ul>
+                </div>
+                <div class="info-section treatment-box">
+                    <h4 style="color: #c62828;"><i class="fa-solid fa-kit-medical"></i> Treatment Suggestions</h4>
+                    <p>Take the plant out of its pot and wash away the soil from the roots. Trim away all black, mushy roots with sterilized scissors until only firm, white roots remain. Discard the old soil and wash the pot thoroughly with a bleach solution before repotting in fresh, dry soil. Withhold watering for a few days to allow roots to heal.</p>
+                </div>
+            </div>
+
+            <!-- Leaf Spot -->
+            <div class="disease-card">
+                <div class="disease-header">
+                    <i class="fa-solid fa-disease"></i>
+                    <h2>Leaf Spot Disease</h2>
+                </div>
+                <div class="info-section">
+                    <h4><i class="fa-solid fa-eye" style="color: #666;"></i> Symptoms</h4>
+                    <p>Brown, black, yellow, or water-soaked spots on leaves. As the disease progresses, the spots may enlarge and merge. Severely infected leaves may yellow and drop.</p>
+                </div>
+                <div class="info-section">
+                    <h4><i class="fa-solid fa-microscope" style="color: #666;"></i> Causes</h4>
+                    <p>Can be caused by either bacteria or fungi. Fungal leaf spots are more common and are spread by splashing water, wind, or contaminated tools.</p>
+                </div>
+                <div class="info-section">
+                    <h4><i class="fa-solid fa-shield-halved" style="color: #2E7D32;"></i> Prevention</h4>
+                    <ul>
+                        <li>Keep the foliage dry by watering the soil directly, not the leaves.</li>
+                        <li>Water early in the day so any splashed water on leaves dries before nightfall.</li>
+                        <li>Clean up and dispose of fallen debris around the plant.</li>
+                    </ul>
+                </div>
+                <div class="info-section treatment-box">
+                    <h4 style="color: #c62828;"><i class="fa-solid fa-kit-medical"></i> Treatment Suggestions</h4>
+                    <p>Immediately remove and discard infected leaves. Isolate the plant if possible. For severe fungal infections, a copper-based fungicide or neem oil can be applied following package instructions. Ensure the plant is not kept in overly humid, stagnant air.</p>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3 class="nav-logo" style="color: white;"><i class="fa-solid fa-leaf"></i> PlantCare</h3>
+                    <p>Your ultimate guide to plant care, maintenance, and gardening success.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="plants.html">Plants Directory</a>
+                        <a href="diseases.html">Diseases</a>
+                        <a href="pests.html">Pest Control</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <p><i class="fa-solid fa-envelope"></i> info@plantcareguide.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +1 234 567 890</p>
+                    <p><i class="fa-solid fa-location-dot"></i> 123 Garden St, Green City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Plant Care Guide. All Rights Reserved. Created for B.Tech Final Year Project.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

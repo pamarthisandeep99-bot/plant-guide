@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plants Directory | Plant Care Guide</title>
+    <meta name="description" content="Browse our extensive directory of indoor and outdoor plants. Learn how to care for them.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">
+                <i class="fa-solid fa-leaf"></i> PlantCare
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="plants.html" class="nav-link">Plants Directory</a></li>
+                <li><a href="diseases.html" class="nav-link">Diseases Guide</a></li>
+                <li><a href="pests.html" class="nav-link">Pest Management</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main style="margin-top: 100px; min-height: 70vh;">
+        <div class="container">
+            <div class="section-header" style="text-align: center; margin-bottom: 2rem;">
+                <h1>Plants Directory</h1>
+                <p>Find detailed care guides for your favorite plants.</p>
+            </div>
+
+            <!-- Search and Filter -->
+            <div class="controls-container" style="display: flex; flex-direction: column; gap: 1rem; align-items: center; margin-bottom: 3rem;">
+                <div class="search-box" style="width: 100%; max-width: 600px; position: relative;">
+                    <i class="fa-solid fa-search" style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--color-text-light);"></i>
+                    <input type="text" id="plantSearch" placeholder="Search plants by name..." style="width: 100%; padding: 12px 15px 12px 40px; border-radius: var(--border-radius-md); border: 1px solid #ddd; font-family: inherit; outline: none; transition: border-color 0.3s;">
+                </div>
+                <div class="filter-buttons" id="filterContainer" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem;">
+                    <button class="btn btn-primary filter-btn active" data-filter="all">All</button>
+                    <button class="btn btn-outline filter-btn" data-filter="indoor">Indoor</button>
+                    <button class="btn btn-outline filter-btn" data-filter="outdoor">Outdoor</button>
+                    <button class="btn btn-outline filter-btn" data-filter="flowering">Flowering</button>
+                    <button class="btn btn-outline filter-btn" data-filter="medicinal">Medicinal</button>
+                    <button class="btn btn-outline filter-btn" data-filter="succulent">Succulents</button>
+                </div>
+            </div>
+
+            <!-- Plants Grid -->
+            <div class="grid plant-grid" id="plantsGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 4rem;">
+                <!-- Rose -->
+                <div class="plant-card" data-category="outdoor flowering">
+                    <img src="images/rose_plant.png" alt="Rose" class="plant-img">
+                    <div class="plant-info">
+                        <h3>Rose</h3>
+                        <p class="plant-short-desc">Classic beautiful flowering plant that requires regular pruning and care.</p>
+                        <button class="btn btn-outline view-details-btn" data-plant="rose" style="width: 100%;">View Details</button>
+                    </div>
+                </div>
+
+                <!-- Tulsi -->
+                <div class="plant-card" data-category="indoor outdoor medicinal">
+                    <img src="images/tulsi_plant.png" alt="Tulsi" class="plant-img">
+                    <div class="plant-info">
+                        <h3>Tulsi (Holy Basil)</h3>
+                        <p class="plant-short-desc">Sacred plant with immense medicinal properties and air-purifying qualities.</p>
+                        <button class="btn btn-outline view-details-btn" data-plant="tulsi" style="width: 100%;">View Details</button>
+                    </div>
+                </div>
+
+                <!-- Aloe Vera -->
+                <div class="plant-card" data-category="indoor succulent medicinal">
+                    <img src="images/aloe_vera.png" alt="Aloe Vera" class="plant-img">
+                    <div class="plant-info">
+                        <h3>Aloe Vera</h3>
+                        <p class="plant-short-desc">Medicinal succulent, great for skin care, loves bright indirect light.</p>
+                        <button class="btn btn-outline view-details-btn" data-plant="aloe_vera" style="width: 100%;">View Details</button>
+                    </div>
+                </div>
+
+                <!-- Money Plant -->
+                <div class="plant-card" data-category="indoor">
+                    <img src="images/money_plant.png" alt="Money Plant" class="plant-img">
+                    <div class="plant-info">
+                        <h3>Money Plant (Pothos)</h3>
+                        <p class="plant-short-desc">Fast growing trailing plant that brings good luck and purifies air.</p>
+                        <button class="btn btn-outline view-details-btn" data-plant="money_plant" style="width: 100%;">View Details</button>
+                    </div>
+                </div>
+
+                <!-- Snake Plant -->
+                <div class="plant-card" data-category="indoor succulent">
+                    <img src="images/snake_plant.png" alt="Snake Plant" class="plant-img">
+                    <div class="plant-info">
+                        <h3>Snake Plant</h3>
+                        <p class="plant-short-desc">Excellent air purifier, requires very little water and light. Almost unkillable.</p>
+                        <button class="btn btn-outline view-details-btn" data-plant="snake_plant" style="width: 100%;">View Details</button>
+                    </div>
+                </div>
+
+                <!-- Hibiscus -->
+                <div class="plant-card" data-category="outdoor flowering">
+                    <img src="images/hibiscus.png" alt="Hibiscus" class="plant-img">
+                    <div class="plant-info">
+                        <h3>Hibiscus</h3>
+                        <p class="plant-short-desc">Tropical plant producing large, colorful, and stunning flowers.</p>
+                        <button class="btn btn-outline view-details-btn" data-plant="hibiscus" style="width: 100%;">View Details</button>
+                    </div>
+                </div>
+
+                <!-- Jasmine -->
+                <div class="plant-card" data-category="outdoor flowering">
+                    <img src="images/jasmine.png" alt="Jasmine" class="plant-img">
+                    <div class="plant-info">
+                        <h3>Jasmine</h3>
+                        <p class="plant-short-desc">Known for its incredibly fragrant white flowers. Can be grown as a climber.</p>
+                        <button class="btn btn-outline view-details-btn" data-plant="jasmine" style="width: 100%;">View Details</button>
+                    </div>
+                </div>
+
+                <!-- Neem -->
+                <div class="plant-card" data-category="outdoor medicinal">
+                    <img src="images/neem.png" alt="Neem" class="plant-img">
+                    <div class="plant-info">
+                        <h3>Neem</h3>
+                        <p class="plant-short-desc">The wonder tree with anti-bacterial and anti-fungal properties.</p>
+                        <button class="btn btn-outline view-details-btn" data-plant="neem" style="width: 100%;">View Details</button>
+                    </div>
+                </div>
+                <!-- Spider Plant -->
+                <div class="plant-card" data-category="indoor">
+                    <img src="images/spider_plant.png" alt="Spider Plant" class="plant-img">
+                    <div class="plant-info">
+                        <h3>Spider Plant</h3>
+                        <p class="plant-short-desc">Adaptable indoor plant known for its cascading foliage and air-purifying qualities.</p>
+                        <button class="btn btn-outline view-details-btn" data-plant="spider_plant" style="width: 100%;">View Details</button>
+                    </div>
+                </div>
+
+                <!-- Lavender -->
+                <div class="plant-card" data-category="outdoor medicinal flowering">
+                    <img src="images/lavender.png" alt="Lavender" class="plant-img">
+                    <div class="plant-info">
+                        <h3>Lavender</h3>
+                        <p class="plant-short-desc">Fragrant herb with beautiful purple flowers, used for essential oils and relaxation.</p>
+                        <button class="btn btn-outline view-details-btn" data-plant="lavender" style="width: 100%;">View Details</button>
+                    </div>
+                </div>
+
+                <!-- Echeveria -->
+                <div class="plant-card" data-category="indoor outdoor succulent">
+                    <img src="images/echeveria.png" alt="Echeveria" class="plant-img">
+                    <div class="plant-info">
+                        <h3>Echeveria</h3>
+                        <p class="plant-short-desc">Stunning rosette-shaped succulent with pastel colors. Low maintenance.</p>
+                        <button class="btn btn-outline view-details-btn" data-plant="echeveria" style="width: 100%;">View Details</button>
+                    </div>
+                </div>
+
+                <!-- Jade Plant -->
+                <div class="plant-card" data-category="indoor succulent">
+                    <img src="images/jade_plant.png" alt="Jade Plant" class="plant-img">
+                    <div class="plant-info">
+                        <h3>Jade Plant</h3>
+                        <p class="plant-short-desc">Long-lived succulent with thick, woody stems and glossy green leaves.</p>
+                        <button class="btn btn-outline view-details-btn" data-plant="jade_plant" style="width: 100%;">View Details</button>
+                    </div>
+                </div>
+
+                <!-- Peace Lily -->
+                <div class="plant-card" data-category="indoor flowering">
+                    <img src="images/peace_lily.png" alt="Peace Lily" class="plant-img">
+                    <div class="plant-info">
+                        <h3>Peace Lily</h3>
+                        <p class="plant-short-desc">Elegant indoor plant with dark green leaves and distinctive white flowers.</p>
+                        <button class="btn btn-outline view-details-btn" data-plant="peace_lily" style="width: 100%;">View Details</button>
+                    </div>
+                </div>
+
+                <!-- Mint -->
+                <div class="plant-card" data-category="indoor outdoor medicinal">
+                    <img src="images/mint.png" alt="Mint" class="plant-img">
+                    <div class="plant-info">
+                        <h3>Mint (Peppermint)</h3>
+                        <p class="plant-short-desc">Vigorous, aromatic herb widely used for culinary and medicinal purposes.</p>
+                        <button class="btn btn-outline view-details-btn" data-plant="mint" style="width: 100%;">View Details</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="noResultsMsg" style="display: none; text-align: center; padding: 2rem; color: var(--color-text-light);">
+                <h3>No plants found. Try a different search term or category.</h3>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal for Plant Details -->
+    <div id="plantModal" class="modal" style="display: none; position: fixed; z-index: 1050; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.6); backdrop-filter: blur(5px); opacity: 0; transition: opacity 0.3s ease;">
+        <div class="modal-content" style="background-color: #fefefe; margin: 5% auto; border-radius: var(--border-radius-lg); width: 90%; max-width: 800px; box-shadow: var(--shadow-lg); position: relative; transform: translateY(-50px); transition: transform 0.3s ease; display: flex; flex-direction: column; overflow: hidden;">
+            <span class="close-modal" style="position: absolute; top: 15px; right: 20px; color: white; font-size: 28px; font-weight: bold; cursor: pointer; text-shadow: 0 2px 4px rgba(0,0,0,0.5); z-index: 10;">&times;</span>
+            <div class="modal-header" style="position: relative; height: 250px;">
+                <img id="modalImg" src="" alt="Plant" style="width: 100%; height: 100%; object-fit: cover;">
+                <div style="position: absolute; bottom: 0; left: 0; width: 100%; background: linear-gradient(transparent, rgba(0,0,0,0.8)); padding: 20px; color: white;">
+                    <h2 id="modalTitle" style="color: white; margin-bottom: 5px;">Plant Name</h2>
+                    <p id="modalScientificName" style="font-style: italic; opacity: 0.9;">Scientific Name</p>
+                </div>
+            </div>
+            <div class="modal-body" style="padding: 25px;">
+                <p id="modalDesc" style="margin-bottom: 20px; font-size: 1.1rem;"></p>
+                
+                <div class="care-requirements" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 25px;">
+                    <div class="req-item" style="background: var(--color-background); padding: 15px; border-radius: var(--border-radius-sm); display: flex; align-items: center; gap: 10px;">
+                        <i class="fa-solid fa-droplet" style="color: #4fc3f7; font-size: 1.5rem;"></i>
+                        <div>
+                            <strong>Watering</strong><br>
+                            <span id="modalWater"></span>
+                        </div>
+                    </div>
+                    <div class="req-item" style="background: var(--color-background); padding: 15px; border-radius: var(--border-radius-sm); display: flex; align-items: center; gap: 10px;">
+                        <i class="fa-solid fa-sun" style="color: #ffd54f; font-size: 1.5rem;"></i>
+                        <div>
+                            <strong>Sunlight</strong><br>
+                            <span id="modalSun"></span>
+                        </div>
+                    </div>
+                    <div class="req-item" style="background: var(--color-background); padding: 15px; border-radius: var(--border-radius-sm); display: flex; align-items: center; gap: 10px;">
+                        <i class="fa-solid fa-temperature-half" style="color: #ff8a65; font-size: 1.5rem;"></i>
+                        <div>
+                            <strong>Temperature</strong><br>
+                            <span id="modalTemp"></span>
+                        </div>
+                    </div>
+                    <div class="req-item" style="background: var(--color-background); padding: 15px; border-radius: var(--border-radius-sm); display: flex; align-items: center; gap: 10px;">
+                        <i class="fa-solid fa-layer-group" style="color: #8d6e63; font-size: 1.5rem;"></i>
+                        <div>
+                            <strong>Soil Type</strong><br>
+                            <span id="modalSoil"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: #e8f5e9; padding: 20px; border-radius: var(--border-radius-md); border-left: 4px solid var(--color-primary); margin-bottom: 20px;">
+                    <h4 style="color: var(--color-primary-dark); margin-bottom: 10px;"><i class="fa-solid fa-leaf"></i> Fertilizer</h4>
+                    <p id="modalFertilizer" style="margin: 0;"></p>
+                </div>
+
+                <div>
+                    <h4 style="color: var(--color-primary-dark); margin-bottom: 10px;">Expert Care Tips</h4>
+                    <p id="modalTips"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- ... same footer as index ... -->
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3 class="nav-logo" style="color: white;"><i class="fa-solid fa-leaf"></i> PlantCare</h3>
+                    <p>Your ultimate guide to plant care, maintenance, and gardening success.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="plants.html">Plants Directory</a>
+                        <a href="diseases.html">Diseases</a>
+                        <a href="pests.html">Pest Control</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <p><i class="fa-solid fa-envelope"></i> info@plantcareguide.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +1 234 567 890</p>
+                    <p><i class="fa-solid fa-location-dot"></i> 123 Garden St, Green City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Plant Care Guide. All Rights Reserved. Created for B.Tech Final Year Project.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Plant Data & Logic -->
+    <script src="script.js"></script>
+</body>
+</html>
